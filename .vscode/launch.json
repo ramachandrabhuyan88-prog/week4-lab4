@@ -1,0 +1,39 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Node.js Accounting App",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/accounting/index.js",
+      "cwd": "${workspaceFolder}/src/accounting",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "outputCapture": "std",
+      "runtimeArgs": ["--require", "source-map-support/register"],
+      "sourceMapPathOverride": {
+        "${workspaceFolder}/src/accounting/**": "${webRoot}/**"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Node.js Accounting App (with Inspector)",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/src/accounting/index.js",
+      "cwd": "${workspaceFolder}/src/accounting",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "runtimeArgs": ["--inspect-brk=9229"]
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to Process",
+      "port": 9229,
+      "skipFiles": ["<node_internals>/**"],
+      "processFilter": "include"
+    }
+  ]
+}

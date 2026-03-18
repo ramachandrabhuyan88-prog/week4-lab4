@@ -1,0 +1,25 @@
+{
+  "name": "student-account-management-system",
+  "version": "1.0.0",
+  "description": "Node.js conversion of legacy COBOL Account Management System",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --inspect-brk index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "accounting",
+    "student-accounts",
+    "cobol-migration"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
